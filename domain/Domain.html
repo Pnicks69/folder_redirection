@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag & Drop File Upload</title>
+  <link rel="stylesheet" href="Domain.css">
+  <script src="ScriptDomain.js" defer></script> <!-- Corrected script reference -->
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">DVD</h1>
+      <p class="drag-drop-text">Drag and drop an item to upload</p>
+      <p class="names">Created by: Donadillo, Verzosa, and Delos Reyes</p>
+    </header>
+
+    <button class="back-button" onclick="window.location.href='../FileDashboard.html';">←</button>
+
+    <form id="upload-form" class="upload-section">
+      <div id="drop-area" class="drop-area">
+        <p>Drag & Drop your file here or 
+          <span id="browse-link" class="browse-link">Browse</span>
+        </p>
+        <input 
+          type="file" 
+          id="file-input" 
+          class="file-input" 
+          name="file" 
+          accept="*/*" 
+          style="display: none;"
+        />
+      </div>
+
+      <div id="file-info" class="file-info"></div>
+
+      <button type="submit" id="send-button" class="send-button" disabled>Send</button>
+    </form>
+
+    <!-- Table to display uploaded files -->
+    <table>
+      <thead>
+        <tr>
+          <th>Uploaded Files</th>
+        </tr>
+      </thead>
+      <tbody id="file-list-body">
+        <!-- Dynamically added rows will go here -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
